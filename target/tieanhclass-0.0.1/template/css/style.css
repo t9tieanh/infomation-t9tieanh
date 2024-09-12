@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    }
+
+    .containerr {
+    width: 100%;
+    position: fixed;
+     z-index: 1000;
+      bottom: 0;
+    }
+
+    .wave {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: url('../image/wave.png') repeat-x;
+    background-size: 250rem 30rem;
+    animation: animate 15s linear infinite;
+    }
+
+    @keyframes  animate {
+    0% {
+        background-position-x: 0;
+        background-position-x: -250rem;
+    }
+    }
+
+    .wave:nth-child(1) {
+    opacity: 0.9;
+    }
+
+    .wave:nth-child(2) {
+    opacity: 0.5;
+    animation-delay: 0.2s;
+    animation-direction: reverse;
+    }
+
+    .wave:nth-child(3) {
+    opacity: 0.7;
+    animation-delay: 5s;
+    }
+    .navbar-brand, .about-me {
+        display: flex;
+        align-items: center;
+    }
+
+    /* .navbar-brand {
+        background-color: #dcdde1;
+    } */
+
+    .navbar-brand div{
+        margin-left: 10px;
+        line-height: 1.2;
+    }
+
+    .about-me {
+        padding-top: 20px;
+        padding-left: 20px;
+        line-height: 2;
+        font-size: 25px; color: black;
+    }
+
+    .navbar-brand .name, .about-me {
+        font-weight: bold;
+    }
+
+    .navbar-brand .subtitle, .about-me {
+        font-size: 0.8em;
+    }
+
+    .content {
+        height: 900px;
+        width: 100%;
+        /* background-color: #f5f6fa */
+        background: url(../image/artem-sapegin-b18TRXc8UPQ-unsplash.jpg) no-repeat  ;
+        /* background-size: contain; */
+        background-size: 100% 100%;
+        /* position: fixed; z-index: 1000; bottom: 0; */
+    }
+
+    .flex-row {
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    .text-muted {
+        font-size: 15px;
+    }
+
+    .btn-group .btn-primary {
+        animation: shake 1.5s infinite; /* Infinite loop */
+    }
+
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+    }
+
+    /* dùng cho biến mất  */
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fade-out {
+        animation: fadeOut 1s forwards;
+    }
+
+    .fade-in {
+        animation: fadeIn 1s forwards;
+    }
+
+
+    .infomation {
+        background-color: #fdfeff47;
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+    }
+
+    /* body {
+        font-family: Arial, sans-serif;
+    } */
+    
+    #introDiv {
+        opacity: 0;
+        transition: opacity 2s;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* dùng cho /animation */
+
+    .txt2 {
+        position: relative;
+        font-family: Arial, sans-serif;
+        color: #17c0fd; /* Màu xanh */
+        font-weight: bold;
+        display: inline-block;
+        white-space: nowrap; /* Giữ đoạn văn bản trên một dòng */
+    }
+
+    @keyframes gentleShake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-1px); }
+        50% { transform: translateX(1px); }
+        75% { transform: translateX(-1px); }
+        100% { transform: translateX(0); }
+    }
+    
+    #intro-text {
+        animation: gentleShake 2s ease-in-out infinite;
+        animation-iteration-count: infinite; /* Lặp lại vô tận */
+    }
+
+    .timeline {
+        border-left: 1px solid hsl(0, 0%, 90%);
+        position: relative;
+        list-style: none;
+      }
+      
+      .timeline .timeline-item {
+        position: relative;
+      }
+      
+      .timeline .timeline-item:after {
+        position: absolute;
+        display: block;
+        top: 0;
+      }
+      
+      .timeline .timeline-item:after {
+        background-color: hsl(0, 0%, 90%);
+        left: -38px;
+        border-radius: 50%;
+        height: 11px;
+        width: 11px;
+        content: "";
+      }
+
+      .btn-link:hover {
+        animation: gentleShake 2s;
+      }
+      
+    
+    
